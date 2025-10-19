@@ -1,0 +1,62 @@
+@import "variables.scss";
+@import "base.scss";
+
+@media screen and (max-width: 1000px) {
+    main .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        .toolbar {
+            display: none;
+        }
+    }
+
+    .page-container {
+        flex-direction: column;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        
+        display: flex;
+        // justify-content: space-evenly;
+        padding: 1rem;
+
+        .menu-title {
+            display: none;
+        }
+
+        ul {
+            font-size: 150%;
+            display: flex;
+            gap: 5rem;
+            li {
+                padding: 0.25rem;
+            }
+        }
+    }
+
+    main {
+        flex-direction: column;
+        .list {
+            font-size: 150%;
+            margin: 2%;
+            gap: 0.2rem;
+            grid-template-columns: repeat(1, 1fr);
+
+            .card {
+                margin: 0% 2%;
+                display: flex;
+                justify-content: flex-start;
+            }
+            
+            img {
+                margin: 0% 5%;
+            }
+        }
+    }
+}

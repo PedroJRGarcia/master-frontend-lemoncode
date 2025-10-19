@@ -1,0 +1,60 @@
+@import "variables.scss";
+@import "base.scss";
+
+@media screen and (min-width: 1280px) {
+    header {
+        position: sticky;
+        top: 0;
+    }
+
+    main {
+        #top-text::after {
+            content: " 5 ";
+            font-size: 140%;
+            font-weight: bold;
+        }
+
+        .first, 
+        .second {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    header {
+        position: sticky;
+        top: 0;
+
+        .platform-title {
+            display: none;
+        }
+    }
+
+    main {
+        .section-title {
+            font-size: 150%;
+            #top-text::after {
+                content: " 3 ";
+                font-size: 140%;
+                font-weight: bold;
+            }
+        }
+
+        .top {
+            flex-wrap: wrap-reverse;
+            div:nth-child(1),
+            div:nth-child(2) {
+                display: none;
+            }
+        }
+        .first, 
+        .second {
+            flex-wrap: wrap;
+        }
+
+        .item {
+            pointer-events: none;
+        }
+    }
+}
