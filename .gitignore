@@ -3,3 +3,6 @@
 .vscode/
 .idea/
 .angulardoc.json
+**/node_modules
+**/dist
+**/.cache
