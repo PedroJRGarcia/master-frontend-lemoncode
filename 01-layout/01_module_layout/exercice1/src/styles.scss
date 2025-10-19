@@ -1,0 +1,57 @@
+$base: red;
+$base2: blue;
+$base3: green;
+$text-color: Silver;
+
+body div {
+    display: flex;
+    justify-content: space-evenly;
+    color: $text-color;
+    padding: 3% 0.5% 3%;
+    border-radius: 10%;
+    flex: auto;
+    gap: 1%;
+}
+
+@mixin colourPalette ($colour) {
+    .darken-4 {
+        background-color: darken($colour, 15%);
+    }
+    .darken-3 {
+        background-color: darken($colour, 12%);
+    }
+    .darken-2 {
+        background-color: darken($colour, 8%);
+    }
+    .darken-1 {
+        background-color: darken($colour, 5%);
+    }
+    .lighten-1 {
+        background-color: lighten($colour, 10%);
+    }
+    .lighten-2 {
+        background-color: lighten($colour, 15%);
+    }
+    .lighten-3 {
+        background-color: lighten($colour, 20%);
+    }
+    .lighten-4 {
+        background-color: lighten($colour, 30%);
+    }
+    .base-color {
+        background-color: $colour;
+        color: white;
+    }
+}
+
+.container-1 {
+    @include colourPalette($base);
+}
+
+.container-2 {
+    @include colourPalette($base2);
+}
+
+.container-3 {
+    @include colourPalette($base3);
+}
